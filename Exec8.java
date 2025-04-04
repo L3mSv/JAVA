@@ -29,7 +29,7 @@ class BankAccount
         this.balance = balance;
     }
 
-    public static void set_BankName_InterestRate(String name, double rate)
+    public static void set_BankName_InterestRate(String name, double rate) 
     {
         bankName = name;
         interestRate = rate;
