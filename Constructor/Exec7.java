@@ -8,6 +8,7 @@ public class Exec7{
         Car car1 = new Car();
         Car car2 = new Car("Porsche", "911 GT3 RS", 2024);
 
+        car1.GetCar();
         car2.GetCar();
     }
 }
@@ -22,7 +23,6 @@ class Car{
         this.model = "Urus";
         this.year = 2018;
 
-        System.out.println("Make: " + make + " |Model: " + model + " |Year: " + year + "\n");
     }
     public Car(String make, String model, int year){
         this.make = make;
