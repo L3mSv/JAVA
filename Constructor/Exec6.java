@@ -1,48 +1,22 @@
 /*
-6. Constructor with Validation
-Write a Java program to create a class called Account with instance variables accountNumber and balance. Implement a parameterized constructor that initializes these variables with validation:
-
-    accountNumber should be non-null and non-empty.
-
-    balance should be non-negative.
-
-    Print an error message if the validation fails.
-
+Write a Java program to create a class called "IDGenerator" with a static variable 'nextID' and a static method "generateID()" that returns the next ID and increments 'nextID'. Demonstrate the usage of generateID in the main method.
 */
 
-public class Exec6{
-    public static void main(String[] args)
-    {
-        Account account1 = new Account("", 43.5);
-        Account account2 = new Account("3", -34);
-        Account account3 = new Account("5", 23.6);
-
-        account1.GetAccount();
-
-        
+public class Exec6 {
+    public static void main(String[] args) {
+        {
+            System.out.println("ID: " + IDGenerator.generateID());
+            System.out.println("ID: " + IDGenerator.generateID());
+            System.out.println("ID: " + IDGenerator.generateID());
+        }
     }
 }
 
-class Account{
-    String accountNumber;
-    double balance;
+class IDGenerator{
 
-    public Account(String accountNumber, double balance){
+    static int nextID = 234;
 
-        if(accountNumber == null || accountNumber.isEmpty()){
-            System.out.println("Error! accountNumber should be non-null and non-empty.\n");
-            return;
-        }
-        if(balance < 0)
-        {
-            System.out.println("Error! balance should be non-negative.");
-            return;
-        }
-        this.accountNumber = accountNumber;
-        this.balance = balance;
-    }
-
-    public void GetAccount(){
-        System.out.println("\nAccountNumber: " + accountNumber + " |Balance: " + balance + "\n");
+    public static int generateID(){
+            return ++nextID; 
     }
 }

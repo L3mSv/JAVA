@@ -1,8 +1,8 @@
 /*
-7. Constructor with Default Values
-Write a Java program to create a class called Car with instance variables make, model, and year. Implement a parameterized constructor that initializes these variables and assigns default values if not provided. Print the values of the variables.
+Write a Java program to create a class called "ComplexInitializer" with a static block that initializes multiple static variables (x, y, z) using complex logic. Print the values of these variables in the main method.
 */
 
+<<<<<<< HEAD:Constructor/Exec7.java
 public class Exec7{
     public static void main(String[] args){
         Car car1 = new Car();
@@ -10,14 +10,22 @@ public class Exec7{
 
         car1.GetCar();
         car2.GetCar();
+=======
+public class Exec7 {
+    public static void main(String[] args) {
+        {
+            System.out.println("x: " + ComplexInitializer.x + "\ny: " + ComplexInitializer.y + "\nz: " + ComplexInitializer.z);
+        }
+>>>>>>> c21615ad385eea7496c6007ef32f7b0dad58704a:Exec7.java
     }
 }
 
-class Car{
-    String make;
-    String model;
-    int year;
+class ComplexInitializer{
+    static int x;
+    static int y;
+    static int z;
 
+<<<<<<< HEAD:Constructor/Exec7.java
     public Car(){
         this.make = "Lamborghini";
         this.model = "Urus";
@@ -28,10 +36,16 @@ class Car{
         this.make = make;
         this.model = model;
         this.year = year;
+=======
+    static {
+        x = 10;
+        y = x * 2;
+        z = calculateZ(x, y);
+>>>>>>> c21615ad385eea7496c6007ef32f7b0dad58704a:Exec7.java
     }
 
-    public void GetCar(){
-        System.out.println("Make: " + make + " |Model: " + model + " |Year: " + year + "\n");
+    static int calculateZ(int x, int y)
+    {
+        return x * y + 10;
     }
-
 }
