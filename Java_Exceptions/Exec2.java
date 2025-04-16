@@ -21,7 +21,7 @@ public class Exec2 {
 
     }
 
-    public static void VerifyOddNumber(int number)
+    public static void VerifyOddNumber(int number) 
     {
         if(number%2 != 0)
         {
