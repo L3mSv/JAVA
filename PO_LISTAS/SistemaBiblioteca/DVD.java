@@ -1,19 +1,30 @@
-package PO_LISTAS.SistemaBiblioteca;
+package LISTA_04.Exec9;
 
 public class DVD extends ItemBiblioteca{
     private int duracaoMinutos;
 
-    public DVD(int id, String titulo, int duracao)
+    public DVD(String titulo, int duracao)
     {
-        super(id, titulo);
+        super(titulo);
         this.duracaoMinutos = duracao;
+    }
+
+    public int getDuracao()
+    {
+        return this.duracaoMinutos;
+    }
+
+    public void setDuracao(int novaDuracao)
+    {
+        this.duracaoMinutos = novaDuracao;
     }
 
     @Override
     public void exibirDetalhes()
     {
         super.exibirDetalhes();
-        System.out.println("Duracao: " + duracaoMinutos);
+        System.out.println("Duracao: " + duracaoMinutos + " min(s)\n");
 
     }
+
 }

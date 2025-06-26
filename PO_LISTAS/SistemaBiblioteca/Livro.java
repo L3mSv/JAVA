@@ -1,11 +1,11 @@
-package PO_LISTAS.SistemaBiblioteca;
+package LISTA_04.Exec9;
 
 public class Livro extends ItemBiblioteca{
     private String autor;
 
-    public Livro(int ID, String titulo, String autor)
+    public Livro(String titulo, String autor)
     {
-        super(ID, titulo);
+        super(titulo);
         this.autor = autor;
     }
 
@@ -13,7 +13,7 @@ public class Livro extends ItemBiblioteca{
     public void exibirDetalhes()
     {
         super.exibirDetalhes();
-        System.out.println("Autor: " + autor);
+        System.out.println("Autor: " + autor + "\n");
 
     }
 }
